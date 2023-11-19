@@ -1,0 +1,41 @@
+@use "../../styles/variables";
+
+.sidebar {
+  position: absolute;
+  width: 65%;
+  top: 0;
+  right: 0;
+  padding: 1.2rem;
+  height: 100lvh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow: hidden;
+
+  background-color: variables.$off-white;
+  transition: all 300ms linear;
+
+  &--close-btn {
+    margin-bottom: 5.4rem;
+  }
+}
+
+.hidden {
+  translate: 100% 0;
+}
+
+@keyframes slideRight {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 65%;
+  }
+}
+
+@media (min-width: 900px) {
+  .sidebar{
+    display: none;
+  }
+}

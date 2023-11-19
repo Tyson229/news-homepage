@@ -1,0 +1,36 @@
+@use "../../../styles/variables";
+
+.top-list-card {
+  display: flex;
+  gap: 2rem;
+
+  &__image {
+    max-width: 100px;
+  }
+
+  &__content {
+    display: grid;
+    justify-content: space-between;
+
+    &__index {
+      font-size: 2.12rem;
+      line-height: 2.12rem;
+      color: variables.$grayish-blue;
+      text-transform: uppercase;
+      font-weight: variables.$bold;
+    }
+
+    &__heading {
+      color: variables.$very-dark-blue;
+
+      &:hover {
+        color: variables.$soft-red;
+        transition: color 100ms linear;
+      }
+    }
+
+    &__description {
+      color: variables.$dark-grayish-blue;
+    }
+  }
+}

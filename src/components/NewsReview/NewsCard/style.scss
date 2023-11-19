@@ -1,0 +1,21 @@
+@use "../../../styles/variables";
+
+.news-card {
+  display: grid;
+  gap: 0.6rem;
+
+  &__heading {
+    font-size: 1.3rem;
+    font-weight: variables.$extrabold;
+
+    &:hover {
+      color: variables.$soft-orange;
+      transition: color 200ms linear;
+    }
+  }
+
+  &__paragraph {
+    color: variables.$grayish-blue;
+    line-height: 26px;
+  }
+}

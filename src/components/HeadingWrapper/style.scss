@@ -1,0 +1,9 @@
+.heading-wrapper {
+  display: grid;
+}
+
+@media (min-width: 900px) {
+  .heading-wrapper {
+    display: flex;
+  }
+}

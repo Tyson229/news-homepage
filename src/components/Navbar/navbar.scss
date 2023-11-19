@@ -1,0 +1,30 @@
+@use "../../styles/variables";
+
+.navbar {
+  display: grid;
+  font-size: 1.2rem;
+  gap: 1.3em;
+  width: 100%;
+  &__link {
+    text-decoration: none;
+    color: variables.$very-dark-blue;
+  
+    &:hover {
+      color: variables.$soft-red;
+      transition: color 200ms linear;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .navbar {
+    display: flex;
+    width: fit-content;
+    font-size: 1rem;
+
+    &__link {
+    color: variables.$dark-grayish-blue;
+
+    }
+  }
+}
