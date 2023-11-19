@@ -1,12 +1,12 @@
-import { forwardRef, useContext } from "react";
+import { useContext } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./sidebar.scss";
 import { MenuContext } from "../../context/MenuContext";
 
-const Sidebar = forwardRef<HTMLElement, {}>((props, ref) => {
+const Sidebar = ({ sidebarRef }: { sidebarRef: React.RefObject<HTMLDivElement> }) => {
   const { isOpen, setIsOpen } = useContext(MenuContext);
   return (
-    <aside ref={ref} className={`sidebar ${isOpen ? "" : "hidden"}`}>
+    <aside ref={sidebarRef} className={`sidebar ${isOpen ? "" : "hidden"}`}>
       <button
         className="sidebar--close-btn"
         onClick={() => {
@@ -18,6 +18,6 @@ const Sidebar = forwardRef<HTMLElement, {}>((props, ref) => {
       <Navbar />
     </aside>
   );
-});
+};
 
 export default Sidebar;

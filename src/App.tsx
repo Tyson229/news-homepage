@@ -17,7 +17,7 @@ function App() {
   return (
     <MenuContext.Provider value={{ isOpen, setIsOpen }}>
       <div className={`container ${isOpen ? "overflow-hidden" : ""}`}>
-        <Sidebar ref={sidebarRef} />
+        <Sidebar sidebarRef={sidebarRef} />
         {isOpen && <DarkBackDrop />}
         <Wrapper>
           <Header />
